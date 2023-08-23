@@ -15,7 +15,7 @@ it showed a downward trend.
 - [Usage](#Usage)
 
 ## Code description
-### Data Visualisation for Streamflow Using Bokeh
+### Data Visualisation for Streamflow and Evapotranspiration (ET) Using Bokeh
 The project uses the Bokeh library to visualize streamflow data, generating an interactive display after reading real and simulated data from CSV files. Key features include a changeable datetime x-axis, an interactive tooltip, and a dual y-axis representation for discharge and precipitation. The main script imports Pandas and Bokeh modules for data manipulation. The Bokeh figure includes discharge line graphs, precipitation bar graphs, customizable labels, and hover tools for interactive data visualization.
 
 ## Getting Started
@@ -54,15 +54,19 @@ Bokeh
    pip install bokeh
    ```
 ### Usage
-Data Preparation: It is requested that an accessible directory be chosen for the observed and simulated CSV files to be placed in. A “Date” column in the CSV files is required. The script should have the path to the intended CSV files updated.
+Data Preparation: It is requested that an accessible directory be chosen for the observed and simulated CSV files to be placed in both for Discharge and ET. A “Date” column in the CSV files is required. The script should have the path to the intended CSV files updated.
 
 ```
 jupyter nbconvert --execute Discharge_Bokeh_Plotting.ipynb
 ```
+```
+jupyter nbconvert --execute ET_Bokeh_Plotting.ipynb
+```
 The script will generate an HTML file containing the interactive Bokeh plot, which can also be visualized with a web browser.
-The following picture shows how the developed script provides the output streamflow time series:
+The following picture shows how the developed script provides the output streamflow and ET time series:
 
 ![](/Bokeh%20Plotting_Discharge_ET/Discharge/Outputs%20for%20Discharge/99_Beeskow.png)
+![](/Bokeh%20Plotting_Discharge_ET/ET/Outputs%20for%20ET/99_Beeskow.png)
 
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
