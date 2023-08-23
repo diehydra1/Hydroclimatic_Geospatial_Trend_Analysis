@@ -60,6 +60,9 @@ Data Preparation: It is requested that an accessible directory be chosen for the
 jupyter nbconvert --execute Discharge_Bokeh_Plotting.ipynb
 ```
 The script will generate an HTML file containing the interactive Bokeh plot, which can also be visualized with a web browser.
+The following picture shows how the developed script provides the output streamflow time series:
+
+![](/Bokeh Plotting_Discharge_ET/Discharge/Outputs for Discharge/99_Beeskow.png)
 
 ## Acknowledgements
 This thesis work is part of the BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
