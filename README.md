@@ -104,7 +104,7 @@ For each of the cases, a DataFrame named result_df will be generated, which will
 
 `Slope`: The Theil-Sen estimator/slope
 
-![](/Mann%20Kendall%20trend%20analysis/M-K%20Test%20Recharge-2_Monthly_Trend.png)
+![](/Mann%20Kendall%20trend%20analysis/M-KTestRecharge-2_Monthly_Trend.png)
 ![](/Mann%20Kendall%20trend%20analysis/M-KTest%20Recharge-1_Seasonal_Trend.png)
 
 ## Acknowledgements
