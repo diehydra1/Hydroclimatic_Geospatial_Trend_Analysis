@@ -35,7 +35,10 @@ The key features/ deliverables-
 3. Determining monthly mean values
 4. Using the Mann-Kendall test to identify trends
 5. Testing data archiving within a DataFrame
-  
+
+### Land Use Implementation and Hydrologic Response Unit Updating
+This repository contains an R script used for Land Use updating for numerous time frames and Hydrologic Response Unit (HRU)-related file processing. The script performs various tasks such as copying `.hru` files, editing `.sub` files, and rewriting `lup.dat` files.
+
 ## Getting Started
 
 ### Prerequisites
@@ -49,12 +52,16 @@ To run this code, the following packages need to be installed in the Anaconda en
    conda activate [enviornment name] 
    ```
 
-3. Install the following by using given commands.
+3. Install the following by using the given commands.
 
    ```
    pip install pandas numpy bokeh matplotlib geopandas shapely simple_colors pymannkendall rasterio scipy
 
    ```
+
+### R (version 4.2.3)
+1. The script assumes the data resides in specified folders (Lu, ifolder, ofolder).
+2. The code uses custom functions (sub_character(), hru_character(), hru_general(), dm()), make sure they are available or define them.
 
 ### Usage
 Data Preparation: It is requested that an accessible directory be chosen for the observed and simulated CSV files to be placed in both for Discharge and ET. A “Date” column in the CSV files is required. The script should have the path to the intended CSV files updated.
@@ -107,6 +114,21 @@ For each of the cases, a DataFrame named result_df will be generated, which will
 ![](/Mann%20Kendall%20trend%20analysis/M_K_Test_Q-1_Seasonal.png)
 
 ![](/Mann%20Kendall%20trend%20analysis/M_K_Test_Q-2_Seasonal.png)
+
+The R script can either be sourced in main R script or run independently.
+Parameters to Update-
+Before running the script, the following needs to be updated:
+
+`Lu`: List of directories containing .hru files.
+
+`luc_all`: Data frame containing HRU and SUBBASIN information.
+
+`ifolder`: Input folder path for temporary operations.
+
+`ofolder`: Output folder path for final files.
+
+Sample Function Definitions-
+For custom functions used (`sub_character()`, `hru_character()`, `hru_general()`, `dm()`), please refer to their respective source code for functionality.
 
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
