@@ -135,4 +135,4 @@ For custom functions used (`sub_character()`, `hru_character()`, `hru_general()`
 
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
-under the supervision of Prof. Dr.-Habil. Irina Engelhardt from the Technical University of Berlin and in association with the co-supervision of Prof. Dr.-Ing. Rainer Helmig from LH2, Universiät Stuttgart.
+under the supervision of Prof. Dr.-Habil. Irina Engelhardt from the Technische Universität Berlin and in association with the co-supervision of Prof. Dr.-Ing. Rainer Helmig from LH2, Universiät Stuttgart.
