@@ -106,6 +106,7 @@ For each of the cases, a DataFrame named result_df will be generated, which will
 
 ![](/Mann%20Kendall%20trend%20analysis/M-KTestRecharge-2_Monthly_Trend.png)
 ![](/Mann%20Kendall%20trend%20analysis/M-KTestRecharge-1_Seasonal_Trend.png)
+
 `Figure`- Trend Analysis of Groundwater Recharge for Lower Spree Catchment
 
 ## Acknowledgements
