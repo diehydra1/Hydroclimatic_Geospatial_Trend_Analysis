@@ -61,7 +61,7 @@ To run this code, the following packages need to be installed in the Anaconda en
 
 ### R (version 4.2.3)
 1. The script assumes the data resides in specified folders (Lu, ifolder, ofolder).
-2. The code uses custom functions (sub_character(), hru_character(), hru_general(), dm()), make sure they are available or define them.
+2. The code uses custom functions (sub_character(), hru_character(), hru_general(), dm()), to make sure the features are available or define them.
 
 ### Usage
 Data Preparation: It is requested that an accessible directory be chosen for the observed and simulated CSV files to be placed in both for Discharge and ET. A “Date” column in the CSV files is required. The script should have the path to the intended CSV files updated.
@@ -116,7 +116,7 @@ For each of the cases, a DataFrame named result_df will be generated, which will
 ![](/Mann%20Kendall%20trend%20analysis/M_K_Test_Q-2_Seasonal.png)
 
 The R script can either be sourced in main R script or run independently.
-Parameters to Update-
+Parameters to Update:
 Before running the script, the following needs to be updated:
 
 `Lu`: List of directories containing .hru files.
@@ -127,8 +127,9 @@ Before running the script, the following needs to be updated:
 
 `ofolder`: Output folder path for final files.
 
-Sample Function Definitions-
+Sample Function Definitions:
 For custom functions used (`sub_character()`, `hru_character()`, `hru_general()`, `dm()`), please refer to their respective source code for functionality.
+
 
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
