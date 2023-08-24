@@ -59,8 +59,8 @@ To run this code, the following packages need to be installed in the Anaconda en
 
    ```
 
-### R (version 4.2.3)
-1. The script assumes the data resides in specified folders (Lu, ifolder, ofolder).
+### R (version 4.2.3) and RStudio
+1. The script assumes the data resides in specified folders (Lu, ifolder, ofolder)
 2. The code uses custom functions (sub_character(), hru_character(), hru_general(), dm()), to make sure the features are available or define them.
 
 ### Usage
@@ -115,7 +115,9 @@ For each of the cases, a DataFrame named result_df will be generated, which will
 
 ![](/Mann%20Kendall%20trend%20analysis/M_K_Test_Q-2_Seasonal.png)
 
-The R script can either be sourced in main R script or run independently.
+LULC1_writeTxtInOut.R
+
+The R script can either be sourced in the main R script or run independently within RStudio interface
 Parameters to Update:
 Before running the script, the following needs to be updated:
 
