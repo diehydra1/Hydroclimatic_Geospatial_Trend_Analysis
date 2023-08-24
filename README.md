@@ -104,9 +104,9 @@ For each of the cases, a DataFrame named result_df will be generated, which will
 
 `Slope`: The Theil-Sen estimator/slope
 
-![](/Mann%20Kendall%20trend%20analysis/M-KTestRecharge-2_Monthly_Trend.png)
+![](/Mann%20Kendall%20trend%20analysis/M_K_Test_Q-1_Seasonalpng)
 
-![](/Mann%20Kendall%20trend%20analysis/M-KTestRecharge-1_Seasonal_Trend.png)
+![](/Mann%20Kendall%20trend%20analysis/M_K_Test_Q-2_Seasonal.png)
 
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
