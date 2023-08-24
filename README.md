@@ -18,14 +18,20 @@ it showed a downward trend.
 ### Data Visualisation for Streamflow and Evapotranspiration (ET) Using Bokeh
 The project uses the Bokeh library to visualize streamflow data, generating an interactive display after reading real and simulated data from CSV files. Key features include a changeable datetime x-axis, an interactive tooltip, and a dual y-axis representation for discharge and precipitation. The main script imports Pandas and Bokeh modules for data manipulation. The Bokeh figure includes discharge line graphs, precipitation bar graphs, customizable labels, and hover tools for interactive data visualization.
 
+#### Hydrological Evaluation, Groundwater Recharge, and Hydrocliamtic Analysis for SWAT Subbasins
+This Python script is designed for analyzing hydrological characteristics in different hydrologic response units (HRUs) and subbasins, such as groundwater recharge, evapotranspiration (ET), and precipitation. The Lower Spree catchment's recharge trend is the main focus of the script, which employs data manipulation and visualization to provide insightful information on Spatial distribution. Geographical data and the results of hydrological models are the main data sources.
+Key Features but not limited to
+1. Calculation of groundwater recharge, ET, and precipitation for each SWAT HRU and subbasin for the Lower Spree catchment
+2. Area-weighted computation of these hydrological features to provide a comprehensive analysis and spatial distribution
+3. Integration with GeoPandas for spatial data manipulation
+4. Utilization of Matplotlib for data visualization
+5. Visualization of Evapotranspiration (ET) rates across subbasins
+   
+   
 ## Getting Started
 
 ### Prerequisites
 To run this code, the following packages need to be installed in the Anaconda environment:
-
-Python 3.9
-Pandas
-Bokeh
 
 1. Open anaconda prompt.
 
@@ -37,22 +43,11 @@ Bokeh
 
 3. Install the following by using given commands.
 
-   -NumPy 
+   ```
+   pip install pandas numpy bokeh matplotlib geopandas shapely simple_colors
 
    ```
-   pip install numpy
-   ```
 
-   -pandas
-
-   ```
-   pip install pandas
-   ```
-   -bokeh
-
-   ```
-   pip install bokeh
-   ```
 ### Usage
 Data Preparation: It is requested that an accessible directory be chosen for the observed and simulated CSV files to be placed in both for Discharge and ET. A “Date” column in the CSV files is required. The script should have the path to the intended CSV files updated.
 
@@ -67,6 +62,18 @@ The following picture shows how the developed script provides the output streamf
 
 ![](/Bokeh%20Plotting_Discharge_ET/Discharge/Outputs%20for%20Discharge/99_Beeskow.png)
 ![](/Bokeh%20Plotting_Discharge_ET/ET/Outputs%20for%20ET/99_Beeskow.png)
+
+```
+jupyter nbconvert --execute groúndwater_recharge_cal.ipynb
+```
+The computed groundwater recharge, ET, and precipitation data for the HRUs and SWAT subbasins are available after successful execution with temporal resolution 
+on a daily basis. Pandas DataFrames are used to store the outcomes. One may adapt the code to plot these characteristics on maps in order to visualize the data.
+The 600 dpi resolution visualizations will be stored in the out_fig subfolder. The catchment's climate at the time the data were taken will be reflected in the filenames.
+The following picture shows how the developed script provides the output streamflow and ET time series for the same gauging point:
+
+![](/Ground%20Water%20Recharge%20Calculation/fig_gw/gw_et_geo.png)
+![](/Ground%20Water%20Recharge%20Calculation/fig_gw/gw_precip_geo.png)
+![](/Ground%20Water%20Recharge%20Calculation/fig_gw/gw_daily_geo.png)
 
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
