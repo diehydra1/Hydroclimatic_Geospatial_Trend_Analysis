@@ -88,14 +88,14 @@ jupyter nbconvert --execute Mann_Kendall.ipynb
 ```
 In the given Python script, Mann-Kendall trend tests are executed on a specialized hydroclimatic dataset, which includes groundwater recharge (represented as GW_RCHGmm), Evapotranspiration (ET), Surface Runoff, as well as minimum (MinTemp) and maximum temperatures (MaxTemp). A popular non-parametric statistical technique to find patterns in time series data.
 For each of the cases, a DataFrame named result_df will be generated, which will contain the following columns:
-**Month**: The unique months extracted from the data
-**Trend_Type**: The type of trend detected (e.g., increasing, decreasing, no trend)
-**h**: A boolean value indicating whether to reject the null hypothesis or not (True if a trend is detected)
-**p_value**: The p-value of the significance test
-**Z_value**: The normalized test statistics
-**Tau**: Kendall Tau
-**var_s**: Variance S
-**Slope**: The Theil-Sen estimator/slope
+`Month`: The unique months extracted from the data
+`Trend_Type`: The type of trend detected (e.g., increasing, decreasing, no trend)
+`h`: A boolean value indicating whether to reject the null hypothesis or not (True if a trend is detected)
+`p_value`: The p-value of the significance test
+`Z_value`: The normalized test statistics
+`Tau`: Kendall Tau
+`var_s`: Variance S
+`Slope`: The Theil-Sen estimator/slope
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
 under the supervision of Prof. Dr.-Habil. Irina Engelhardt from the Technical University of Berlin and in association with the co-supervision of Prof. Dr.-Ing. Rainer Helmig from LH2, Universiät Stuttgart.
