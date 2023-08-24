@@ -18,7 +18,7 @@ it showed a downward trend.
 ### Data Visualisation for Streamflow and Evapotranspiration (ET) Using Bokeh
 The project uses the Bokeh library to visualize streamflow data, generating an interactive display after reading real and simulated data from CSV files. Key features include a changeable datetime x-axis, an interactive tooltip, and a dual y-axis representation for discharge and precipitation. The main script imports Pandas and Bokeh modules for data manipulation. The Bokeh figure includes discharge line graphs, precipitation bar graphs, customizable labels, and hover tools for interactive data visualization.
 
-#### Hydrological Evaluation, Groundwater Recharge, and Hydrocliamtic Analysis for SWAT Subbasins
+#### Hydrological Evaluation, Groundwater Recharge, and Hydrocliamtic Analysis 
 This Python script is designed for analyzing hydrological characteristics in different hydrologic response units (HRUs) and subbasins, such as groundwater recharge, evapotranspiration (ET), and precipitation. The Lower Spree catchment's recharge trend is the main focus of the script, which employs data manipulation and visualization to provide insightful information on Spatial distribution. Geographical data and the results of hydrological models are the main data sources.
 Key Features but not limited to
 1. Calculation of groundwater recharge, ET, and precipitation for each SWAT HRU and subbasin for the Lower Spree catchment
@@ -26,8 +26,16 @@ Key Features but not limited to
 3. Integration with GeoPandas for spatial data manipulation
 4. Utilization of Matplotlib for data visualization
 5. Visualization of Evapotranspiration (ET) rates across subbasins
-   
-   
+
+### Modified Non-parametric Mann-Kendall Test for Climate Trend Analysis
+The archive includes a Python script for utilizing the Mann-Kendall test in order to analyze climate trend data. The script reads various groundwater recharge and temperature statistics, then runs Mann-Kendall tests to look for any potential patterns over the course of many months. A data frame is used to store and analyze the test results, including p-values and Sen's slopes.
+The key features/ deliverables- 
+1. Reading temperature and groundwater recharge time series data from CSV files
+2. Formatting and preprocessing data
+3. Determining monthly mean values
+4. Using the Mann-Kendall test to identify trends
+5. Testing data archiving within a DataFrame
+  
 ## Getting Started
 
 ### Prerequisites
@@ -44,7 +52,7 @@ To run this code, the following packages need to be installed in the Anaconda en
 3. Install the following by using given commands.
 
    ```
-   pip install pandas numpy bokeh matplotlib geopandas shapely simple_colors
+   pip install pandas numpy bokeh matplotlib geopandas shapely simple_colors pymannkendall rasterio scipy
 
    ```
 
@@ -75,6 +83,19 @@ The following picture shows how the developed script provides the output streamf
 ![](/Ground%20Water%20Recharge%20Calculation/fig_gw/gw_precip_geo.png)
 ![](/Ground%20Water%20Recharge%20Calculation/fig_gw/gw_daily_geo.png)
 
+```
+jupyter nbconvert --execute Mann_Kendall.ipynb
+```
+In the given Python script, Mann-Kendall trend tests are executed on a specialized hydroclimatic dataset, which includes groundwater recharge (represented as GW_RCHGmm), Evapotranspiration (ET), Surface Runoff, as well as minimum (MinTemp) and maximum temperatures (MaxTemp). A popular non-parametric statistical technique to find patterns in time series data.
+For each of the cases, a DataFrame named result_df will be generated, which will contain the following columns:
+**Month**: The unique months extracted from the data
+**Trend_Type**: The type of trend detected (e.g., increasing, decreasing, no trend)
+**h**: A boolean value indicating whether to reject the null hypothesis or not (True if a trend is detected)
+**p_value**: The p-value of the significance test
+**Z_value**: The normalized test statistics
+**Tau**: Kendall Tau
+**var_s**: Variance S
+**Slope**: The Theil-Sen estimator/slope
 ## Acknowledgements
 The script development and automated analysis are part of the research work for the MSc. Thesis, BMBF project SpreeWasser: N, aimed at developing innovative Integrated Water Resources Management (IWRM) tools and strategies
 under the supervision of Prof. Dr.-Habil. Irina Engelhardt from the Technical University of Berlin and in association with the co-supervision of Prof. Dr.-Ing. Rainer Helmig from LH2, Universiät Stuttgart.
